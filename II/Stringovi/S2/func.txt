@@ -1,0 +1,16 @@
+string.length()
+
+string.substr(pos, len)
+
+string.find(str)
+string.find(str, pos)
+
+string.insert(str, pos)
+
+string.erase(pos, len)
+
+string.replace(pos, len, str)
+
+string.assign(count, char)
+
+str.empty()
