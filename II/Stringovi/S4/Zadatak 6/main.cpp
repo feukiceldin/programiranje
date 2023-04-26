@@ -9,21 +9,33 @@ int main(int argc, char** argv) {
 	cout << "Unesite recenicu: ";
 	getline(cin, str);
 	
+	if (str.find(' ') == -1){
+		cout << str;
+		return 0;
+	}
+	
+	int i = 0;
 	int j = 0;
 	int max = 0;
 	int maxInd = 0;
-	for (int i = 0; i < str.length(); i++){
-		if (str[i] == ' ' || i == str.length()-1){
+	for (i = 0; i < str.length(); i++){
+		if (str[i] == ' '){
 			if (j > max){
 				max = j;
 				maxInd = i-j;
 			}
 			j = 0;			
+			continue;
 		}
 		j++;
 	}
 	
-	cout << str.substr(maxInd+1, max);
-
+	if (j > max){
+		max = j;
+		maxInd = i-j;
+	}
+	
+	cout << str.substr(maxInd, max);
+	 
 	return 0;
 }
