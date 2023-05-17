@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	
+	ifstream datoteka;
+	char str[100];
+	
+	cout << "Unesite ime datoteke: ";
+	cin.get(str, 100);	
+	
+	datoteka.open(str);
+	
+	if (datoteka.is_open()){
+		char i = 0;
+		int count = 1;
+		while (!datoteka.eof()){
+			i = datoteka.get();
+			if (i == ' ' || i == '\t'){
+				count++;
+				while (i == ' ' || i == '\t'){
+					i = datoteka.get();
+				}
+			} else if (i == '\n'){
+				while (!datoteka.eof()){
+					i = datoteka.get();
+					if (i != '\n' && i != ' ' && i != '\t'){
+						count++;
+						break;
+					} 
+				}
+			}
+		}
+		
+		cout << "U datoteci " << str << " ima " << count << " rijeci";
+		
+	} else {
+		cout << "Nemoguce pronaci datoteku.";
+	}
+	
+	datoteka.close();
+	
+	return 0;
+}
