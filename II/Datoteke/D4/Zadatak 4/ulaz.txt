@@ -1,0 +1,5 @@
+Teme koje su obradjivane:
+Petlje
+Funkcije
+Nizovi
+Datoteke
