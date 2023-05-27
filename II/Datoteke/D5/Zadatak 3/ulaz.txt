@@ -1,0 +1,4 @@
+Cijena soka je 3
+Cijena cokoladeje 4
+Cijena limunade je 2
+Cijena stana je 200000
