@@ -1,0 +1,4 @@
+1. Unijeti kvadratnu matricu A reda n. Naci A na kvadrat = A*A
+2. Pronaci rjesenje sistema od dvije linearne jednacine sa dvije nepoznate koristeci 2D niz.
+ax + by = e
+cx + dy = f
